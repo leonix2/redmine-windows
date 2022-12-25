@@ -167,7 +167,7 @@ To have Puma server started automatically with Windows, perform the following st
     ```
     ServerName redmine.myserver.com:80
     ```
-- Create VirtualHost section for your Redmine domain, keep port 3000 cause it used for Redmine application server
+- Create VirtualHost section for your Redmine domain, keep port 3000 unchanged cause it used for Puma application server
     ```
     <VirtualHost *:80>
         ServerName redmine.myserver.com
