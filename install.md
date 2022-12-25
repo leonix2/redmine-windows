@@ -11,10 +11,10 @@
 * Apache 2.4
 
 
-##### 1. Download and Install Microsoft Visual C++ 2019 Redistributable Package (x64)
+### 1. Download and Install Microsoft Visual C++ 2019 Redistributable Package (x64)
 https://aka.ms/vs/17/release/vc_redist.x64.exe
 
-##### 2. Install MySQL  server for Windows
+### 2. Install MySQL  server for Windows
 
 - Download the package
 > https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-5.7.39.0.msi
@@ -28,13 +28,13 @@ https://aka.ms/vs/17/release/vc_redist.x64.exe
 - Leave the default values on next two screens
 - Press "Execute" on "Apply Configuration" Screen
 
-##### 3. Download MySQL Connector for Windows:
+### 3. Download MySQL Connector for Windows:
 
 > https://cdn.mysql.com//archives/mysql-connector-c/mysql-connector-c-6.1.3-winx64.zip
 
 - Unzip it and copy files from child directory to c:\mysql-connector
 
-##### 4. Create MySQL DB and User for Redmine:
+### 4. Create MySQL DB and User for Redmine:
 
 - Open MySQL console from Installed programs
 - Enter the root password from section 2
@@ -45,7 +45,7 @@ https://aka.ms/vs/17/release/vc_redist.x64.exe
       GRANT ALL PRIVILEGES ON redmine.* TO 'redmine'@'localhost';
 - You should see "QUERY OK" after each command. Close MySQL Console.
 
-##### 5. Install Apache Web Server
+### 5. Install Apache Web Server
 - Download Package
   https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.54-win64-VS17.zip
 - Unzip the Apache24 folder to `c:\Apache24` (that is the ServerRoot in the config).
@@ -63,7 +63,7 @@ https://aka.ms/vs/17/release/vc_redist.x64.exe
 - You can test your installation by opening up your Browser and typing in the address:
   http://localhost
 
-###### 6. Install Ruby for Windows.
+### 6. Install Ruby for Windows.
 
 - Download Ruby 2.7.5+devkit package from
 > https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.5-1/rubyinstaller-devkit-2.7.5-1-x64.exe
@@ -74,7 +74,7 @@ https://aka.ms/vs/17/release/vc_redist.x64.exe
   installing process press ENTER to exit.
 
 
-##### 7. Download MIME INFO Package for Debian (Yeah, for Debian :) )
+### 7. Download MIME INFO Package for Debian (Yeah, for Debian :) )
 
 >http://ftp.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_2.2-1_amd64.deb
 
@@ -86,7 +86,7 @@ https://aka.ms/vs/17/release/vc_redist.x64.exe
     ```
 - Close and reopen CMD Window for applying new env variable.
 
-##### 8. Import the existent MySQL Database
+### 8. Import the existent MySQL Database
 
 - Copy DB Dump File to c:\redmine_4-2.sql
 - In CMD Console apply the following command's
@@ -96,7 +96,7 @@ https://aka.ms/vs/17/release/vc_redist.x64.exe
     ```
 - Enter Redmine DB User password from section 2.2 for import apply.
 
-##### 9. Setting up Redmine and Ruby
+### 9. Setting up Redmine and Ruby
 
 - Download Redmine package - https://www.redmine.org/releases/redmine-4.2.9.zip
 - Extract it to c:\Webserver\Redmine
@@ -123,7 +123,7 @@ https://aka.ms/vs/17/release/vc_redist.x64.exe
       bundle exec rake db:migrate
     ```
 
-##### 10. Redmine Configuration
+### 10. Redmine Configuration
 
 Redmine settings are defined in a file named `config/configuration.yml`.
 
@@ -136,9 +136,9 @@ Example:
 ```
 attachments_storage_path: D:/redmine/files
 ```
-##### 11. Setting up Application and Web Servers for Redmine
+### 11. Setting up Application and Web Servers for Redmine
 
-###### 11.1 Puma application server.
+#### 11.1 Puma application server.
 
 To have Puma server started automatically with Windows, perform the following steps:
 
@@ -152,7 +152,7 @@ To have Puma server started automatically with Windows, perform the following st
 - In Actions, go to New | Start a program and find pumastart.bat. (C:\ruby\pumastart.bat)
 - On the Triggers tab, click New and choose Begin the task: At startup (located in the top dropdown).
 
-###### 11.2 Apache Web server.
+#### 11.2 Apache Web server.
 
 - Open file c:\apache24\conf\httpd.conf
 - Uncomment following module lines:
