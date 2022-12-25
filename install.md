@@ -32,14 +32,14 @@ https://aka.ms/vs/17/release/vc_redist.x64.exe
 
 > https://cdn.mysql.com//archives/mysql-connector-c/mysql-connector-c-6.1.3-winx64.zip
 
-- Unzip it and copy files from child directory to c:\mysql-connector
+- Unzip it and copy files from child directory to `c:\mysql-connector` (Create dir before)
 
 ### 4. Create MySQL DB and User for Redmine:
 
 - Open MySQL console from Installed programs
 - Enter the root password from section 2
-- Enter the following commands, change the <PASSWORD> to new password which will be used for Redmine DB user
--
+- Enter the following commands, change the `<PASSWORD>` to new password which will be used for Redmine DB user
+
       CREATE DATABASE redmine CHARACTER SET utf8mb4;
       CREATE USER 'redmine'@'localhost' IDENTIFIED BY '<PASSWORD>';
       GRANT ALL PRIVILEGES ON redmine.* TO 'redmine'@'localhost';
